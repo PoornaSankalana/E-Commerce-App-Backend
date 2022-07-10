@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const Products = require("../models/Products");
 const Product = require("../models/Products");
 const { verifyTokenAndAdmin } = require("./verifyToken");
 
@@ -68,7 +67,7 @@ router.get("/find", verifyTokenAndAdmin, async (req, res) => {
                 },
             });
         } else {
-            products = await Products.find();
+            products = await Product.find();
         }
 
         res.status(200).json(products);
