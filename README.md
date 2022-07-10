@@ -1,2 +1,2 @@
 # E-Commerce-App-Backend
-This is a real world e commerce web application
+This is a real world E-Commerce Web Application
