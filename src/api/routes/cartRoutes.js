@@ -45,10 +45,10 @@ router.delete(
     },
 );
 
-// GET CART
-router.get("/find/:id", verifyTokenAuthorization, async (req, res) => {
+// GET USER CART
+router.get("/find/:userId", verifyTokenAuthorization, async (req, res) => {
     try {
-        const cart = await Cart.findById(req.params.id);
+        const cart = await Cart.find({ userId: req.params.userId });
         res.status(200).json(cart);
     } catch (error) {
         res.status(500).json(error);
